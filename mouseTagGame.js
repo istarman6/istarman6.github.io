@@ -48,18 +48,15 @@ function draw(){
 }
 
 function winScreen(){
-	background(random(255),random(255),random(255))
+	background(117, 227, 255)
 	fill(255)
 	textSize(40)
 	text("You won!!", windowWidth/2, 50)
 
 	rotation++
 
-
-
-
 	push()
-	translate(windowWitdh/2,windowHeight/2)
+	translate(windowWidth/2,windowHeight/2)
 	rotate(radians(rotation))
 	image(furby, 0, 0)
 	
@@ -67,7 +64,7 @@ function winScreen(){
 
 }
 function start(){
-	fill(255)
+	fill(255, 117, 227)
 	textSize(40)
 	text("your score is: " + score, windowWidth/2, 50)
 	image(furby, xPos, yPos, 30, 30)
