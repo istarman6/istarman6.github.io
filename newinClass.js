@@ -1,0 +1,1 @@
+newinClass.js
