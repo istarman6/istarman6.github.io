@@ -1,11 +1,37 @@
+let BlueMoon
+
+function preload(){
+  BlueMoon = loadImage('BlueMoon.png')
+}
+
+
 function setup() {
   createCanvas(windowWidth,windowHeight);
+  background(20, 52, 105);
 }
 
 function draw() {
-  background(167, 205, 252);
-  //background(random(0,255),random(0,255),random(0,255))
-  
+  if(mouseIsPressed == true){
+    background(20, 52, 105);
+    image(BlueMoon, 700, 100, 175, 175)
+    }else{
+
+    background(167, 205, 252)
+        //sun
+        fill(245, 242, 81)
+        ellipse(700,100,175,175)
+        //bee
+        fill(252, 234, 71)
+        ellipse(500, 300, 45, 25)
+        fill(0)
+        ellipse(485, 300, 3, 20)
+        ellipse(500, 300, 5, 25)
+        ellipse(515, 300, 3, 20)
+        //wings
+        fill(255)
+        ellipse(500, 280, 20, 20)
+    }
+
   noStroke()
   fill(86, 153, 108)
   rect(0,500,windowWidth,windowHeight/3)
@@ -33,11 +59,9 @@ function draw() {
   fill(130,120,206)
   ellipse(410,402,40,45)
   
-  //sun
-  fill(245, 242, 81)
-  ellipse(700,100,175,175)
-  
-  
+  function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
   
   
   
