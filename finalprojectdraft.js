@@ -2,6 +2,7 @@ let stage = 0
 let winner
 let loser
 let y = 300
+let x = 500
 
 let cactusFont
 //let background
@@ -27,7 +28,14 @@ function draw(){
 		}else if(keyCode === DOWN_ARROW){
 			y++;
 			//will go down if pressed
+		}else if(keyCode === LEFT_ARROW){
+			x--;
+			//will do left if pressed
+		}else if(keyCode === RIGHT_ARROW){
+			x++;
+			//will go right if pressed
 		}
+
     }
 	//stage 0 = start screen
 	//stage 1 = game screen
@@ -102,14 +110,14 @@ function gameScreen(){
         rect(0, 1000, 5000, 1000)
     //bee
 		fill(252, 234, 71)
-        ellipse(500, y, 45, 25)
+        ellipse(x, y, 45, 25)
         fill(0)
-        ellipse(485, y, 3, 20)
-        ellipse(500, y, 5, 25)
-        ellipse(515, y, 3, 20)
+        ellipse(x-15, y, 3, 20)
+        ellipse(x, y, 5, 25)
+        ellipse(x+15, y, 3, 20)
     //wings
         fill(255)
-        ellipse(500, y-20, 20, 20)
+        ellipse(x, y-20, 20, 20)
 }
 
 function winScreen(){
