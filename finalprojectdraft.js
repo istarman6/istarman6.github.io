@@ -1,7 +1,6 @@
 let canvas
 
 let cactusFont
-let nightBack
 let land
 let bird
 let flower
@@ -73,7 +72,6 @@ function preload(){
 	bird = loadImage('birdEnemy.png')
 	bee = loadImage('bee.png')
 	flower = loadImage('flower.png')
-	nightBack = loadImage('nightBack.png')
 	tree = loadImage('tree.png')
 	hive = loadImage('beeHive.png')
 }
